@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+    
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    font-size: 1.8rem;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background-color: black;
+}
+#logo{
+    width: 73px;
+}
+.header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color:var(--main-color);
+}
+#menu-btn{
+    display: none;
+}
+.search-form{
+    top: 10%;
+    position: absolute;
+    top:115%; right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.search-form.active{
+    transform: scaleY(1);
+   
+}
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:1rem;
+    text-transform: none;
+}
+
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black);
+}
+
+.header .search-form label:hover{
+    color:var(--main-color);
+}
+
+
+.nav-bar{
+    display: flex;
+    
+}
+.nav-bar li{
+    list-style: none;
+    margin-left: 25px;
+}
+.nav-bar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.8rem;
+}
+.nav-bar li a:hover{
+    color: var(--main-color);
+    border-bottom: var(--border);
+    padding-bottom: 4px;
+}
+@media screen and (max-width: 550px){
+    .nav-bar{
+        display: none;
+    }
+    #menu-btn{
+        display: inline-block;
+    }
+}
+section{
+    padding:2rem 7%;
+}
+.home{
+    background:url(../images/home-img.jpeg) no-repeat;
+    background-size: contain;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    min-width:120%;
+    padding-top: 6em;
+}
+
+.btn-cool{
+    background-color: var(--main-color);
+    color: white;
+    padding: 8px 20px;
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+.btn-cool:hover{
+    letter-spacing: .4rem;
+}
+.home .content{
+    width: 40%;
+}
+.home .content h1{
+    font-size: 6rem;
+    color: white;
+}
+.home .content p{
+    font-size: 2rem;
+    color: white;
+    line-height: 2.3;
+}
+.about{
+    text-align: center;
+}
+
+.row{
+    margin-top: 2rem; 
+    display: flex;
+  
+    background-color: var(--black);
+}
+.about h3{
+    color: var(--main-color);
+    font-size: 4rem;
+}
+.about h3 span{
+    color: white;
+    
+}
+.about p{
+    color: rgb(177, 172, 172);
+    font-size: 1.7rem;
+    margin: 2em 0;
+}
+.row .col{
+    width: 50%;
+}
+#about-img{
+    width: 100%;
+    height: 100%;
+}
+.row .content{
+    text-align: left;
+    padding-left: 3%;
+    padding-top: 5%;
+    width: 50%;
+ 
+}
+.row .content h3{
+    color: white;
+    font-size: 3rem
+}
+.menu{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    margin-top: 3rem;
+}
+.menu-item{
+    border: var(--border);
+    text-align: center;
+    padding: 5%;
+    color: white;
+    
+}
+.menu-item:hover{
+    background-color: white;
+    color:#010103;
+}
+.menu-item .content{
+    padding: 18% 1%;
+    
+}
+.menu-section h3{
+    color: white;
+    font-size:  4rem;
+    text-align: center;
+}
+.menu-section h3 span{
+    color: var(--main-color);
+}
+.menu-item .content h5{
+    font-size: 2.4rem;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+.menu-item .content h4{
+    font-size: 2.6rem;   
+    margin-bottom: 0.5em;
+}
+.btn{
+    background-color: var(--main-color);
+    color: white;
+    font-size: 2rem;
+    padding: .5em .4em;
+}
+.product-row{
+    display: flex;
+    column-gap: 1.4%;
+}
+.products{
+    border: var(--border);
+    text-align: center;
+    width: 40%;
+    padding-top: 8%;
+
+}
+.products h3{
+    color: white;
+    font-size: 2.7rem;
+    margin: 10% 0;
+}
+.products h4{
+    color: white;
+    font-size: 2.1rem;
+    margin-bottom: 10%;
+}
+.product h3{
+    color: white;
+    font-size: 3.6rem;
+    text-align: center;
+}
+.product-row{
+    margin-top: 1em;
+}
+.product span{
+    color: var(--main-color);
+}
+.review h3{
+    color: white;
+    font-size: 3.6em;
+    text-align: center;
+}
+.review span{
+    color: var(--main-color)
+}.content-container{
+    display: flex;
+    gap: 2em;
+    margin-top: 4em;
+}
+.review .content{
+    border: var(--border);
+    text-align: center;
+    padding:1em;
+}
+.review h4{
+    font-size: 2em;
+    color: white;
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+.review p{
+    font-size: 1.5em;
+    color: white;
+    margin: 1em auto;
+    width: 80%;
+    line-height: 1.8;
+}
+.review #profile-img{
+    width: 80px;
+    border-radius: 50%;
+    margin-top: 1em;
+    
+}
+.review #quote{
+    margin-top: 3em;
+}
+
+.contact h3{
+    color: var(--main-color);
+    font-size: 3.6em;
+    text-align: center;
+}
+.contact .content-container{
+    display: flex;
+    background:var(--black);
+    flex-wrap: wrap;
+    gap:1rem;
+
+}
+.contact h3 span{
+    color: white;
+}
+.contact .content-container .content-map{
+    width: 50%;
+}
+.contact .content-container .content{
+    width: 45%;
+    padding: 4em;
+    text-align: center;
+}
+.contact .content-container .content h3{
+    color: white;
+}
+.map{
+    width: 100%;
+    height: 100%;
+}
+.inputBox{
+    margin: 1em 0;
+    
+}
+.inputBox input{
+    color: white;
+    background-color: #010103;
+    padding: 1em;
+    width: 100%;
+    font-size: 2em; 
+}
+.blog-container{
+    margin-top: 1em;
+}
+.blog-container h3{
+    color: white;
+    font-size: 3.6rem;
+    text-align: center;
+}
+.blog-container h3 span{
+    color: var(--main-color);
+
+}
+.blog{
+    display: flex;
+    gap: 1rem;
+    margin-top: 3em;
+   
+}
+.blog .content{
+    border: var(--border);
+    text-align: left;
+    width: 40%;
+}
+.blog-container .blog .content .image{
+    overflow:hidden;
+}
+.blog-container .blog .content .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.blog-container .blog .content:hover .image img{
+    transform: scale(1.2);
+}
+
+.blog .content img{
+    width: 100%;
+}
+.blog-desc{
+    padding: 1em;
+}
+.blog-desc h3{
+    font-size: 2.5rem;
+    text-align: left;
+    margin-top: 1em;
+
+}
+.blog #admin{
+    color: var(--main-color);
+    font-size: 2rem;
+   
+}
+.blog-desc p{
+    color: white;
+    line-height: 1.8;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.links{
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+    
+}
+.links a{
+    color: white;
+    font-size: 2.5rem;
+    padding: .5rem 1rem;
+    border: var(--border);
+}
+.links a:hover{
+    background-color: var(--main-color);
+}
+.name h3{
+    color: white;
+    font-size: 2rem;
+    
+    margin: 3rem 0;
+}
+.name h3 span{
+    color: var(--main-color);
+    
+}
+.footer{
+    background-color: var(--black);
+    text-align: center;
+}
+
+/* media queries */
+@media (max-width:1170px){
+    .home .content h1{
+        font-size: 4rem;
+    }
+    
+}
+@media (max-width:975px){
+    .home .content h1{
+        font-size: 3rem;
+    }
+    .home .content p{
+        font-size: 1.5em;
+        line-height: 1.4;
+    }
+}
+@media (max-width:877px){
+    .home .content h1{
+        font-size: 3rem;
+        margin-top: 2em;
+    }
+    
+}
+@media (max-width:768px){
+   
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    .home{
+        background-size:contain;
+        
+        background-position: center;
+        min-height: 70vh;
+    }
+    .home .content h1{
+        font-size: 3rem;
+        margin-top: 2em;
+    }
+    .home .content p{
+        font-size: 1.3em;
+        line-height: 1.4;
+    }
+    .review h4{
+        font-size: 1.5em;
+    }
+    .review p{
+        font-size: 1.2em;
+        width: 100%;
+        line-height: 1.6;
+    }
+    .contact h3, .menu-section h3, .about h3, .review h3{
+        font-size: 2rem
+    }
+    .product h3{
+        font-size: 2rem;
+    }
+
+  
+    .inputBox input{
+        font-size: 1.5em; 
+    }
+    .blog-container h3{
+        font-size: 3rem;
+    }
+    .blog-desc h3{
+        font-size: 2rem;
+    }
+    .blog #admin{
+        font-size: 1.5rem;
+       
+    }
+     .blog-container h3{
+        font-size: 2rem;
+     }
+    .blog-desc p{
+        line-height: 1.6;
+        font-size: 1.2em;
+    }
+    .btn-cool{
+        font-size: 1.4rem;
+    }
+    .btn{
+        font-size: 1.6rem;
+    }
+    .contact .content-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact .content-container .content-map{
+        width: 100%;
+    }
+    .contact .content-container .content{
+        width: 100%;
+    }
+    .links a{
+        font-size: 2rem;
+    }
+    .name h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:593px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+    .home .content h1{
+        font-size: 2.5rem;
+        margin-top: 2em;
+    }
+    .home .content p{
+        font-size: 1.3em;
+        line-height: 1.4;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .row .content{
+        width: 100%;
+    }
+    .row .col{
+        width: 100%;
+    }
+    .review p{
+        font-size: 1em;
+        width: 100%;
+        line-height: 1.6;
+    }
+    .review h4{
+        font-size: 1.2em;
+    }
+    .blog-desc h3{
+        font-size: 1.3rem;
+    }
+    .blog #admin{
+        font-size: 1rem;
+    }
+
+    .blog-desc p{
+        line-height: 1.6;
+        font-size: 1em;
+    }
+    .btn-cool{
+        font-size: 1.2rem;
+    }
+    .btn{
+        font-size: 1.3rem;
+    }
+    .links a{
+        font-size: 1.5rem;
+    }
+    .name h3{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
